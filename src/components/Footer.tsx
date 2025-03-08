@@ -14,6 +14,54 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ theme }) => {
   const currentYear = new Date().getFullYear();
 
+  const footerLinks = {
+    product: [
+      { name: "Features", path: "/features" },
+      { name: "Modules", path: "/modules" },
+      { name: "Case Studies", path: "/case-studies" },
+      { name: "Pricing", path: "/pricing" },
+      { name: "Mobile App", path: "/mobile" },
+      { name: "Product Updates", path: "/updates" },
+    ],
+    company: [
+      { name: "About Us", path: "/about" },
+      { name: "Blog", path: "/blog" },
+      { name: "Careers", path: "/careers" },
+      { name: "Contact", path: "/contact" },
+      { name: "Corporate Responsibility", path: "/corporate-responsibility" },
+      { name: "ESG", path: "/esg" },
+      { name: "Diversity & Inclusion", path: "/diversity" },
+      { name: "Events", path: "/events" },
+    ],
+    developers: [
+      { name: "API & Documentation", path: "/developers" },
+      { name: "Bug Bounty", path: "/security/bug-bounty" },
+      { name: "Hackathons", path: "/hackathons" },
+      { name: "Feature Requests", path: "/features/requests" },
+    ],
+    partners: [
+      { name: "Partner Portal", path: "/partners/portal" },
+      { name: "Startup Program", path: "/startup-program" },
+      { name: "Affiliate Program", path: "/affiliate" },
+    ],
+    resources: [
+      { name: "Trust Center", path: "/trust" },
+      { name: "Compliance Hub", path: "/compliance" },
+      { name: "Media Kit", path: "/media-kit" },
+      { name: "Whitepapers", path: "/whitepapers" },
+    ],
+    community: [
+      { name: "Merch Store", path: "/store" },
+      { name: "VIP Access", path: "/vip" },
+      { name: "Leaderboard", path: "/leaderboard" },
+    ],
+    legal: [
+      { name: "Privacy", path: "/privacy" },
+      { name: "Terms", path: "/terms" },
+      { name: "Cookies", path: "#cookies" },
+    ],
+  };
+
   return (
     <footer
       className={`${
@@ -26,9 +74,9 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12"
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-12 mb-12"
         >
-          <div>
+          <div className="col-span-2">
             <Link to="/" className="text-2xl font-semibold">
               Tredumo
             </Link>
@@ -100,54 +148,20 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
               Product
             </h4>
             <ul className="space-y-4">
-              <li>
-                <Link
-                  to="/features"
-                  className={`${
-                    theme === "dark"
-                      ? "text-white/80 hover:text-white"
-                      : "text-black/80 hover:text-black"
-                  } transition-colors`}
-                >
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/modules"
-                  className={`${
-                    theme === "dark"
-                      ? "text-white/80 hover:text-white"
-                      : "text-black/80 hover:text-black"
-                  } transition-colors`}
-                >
-                  Modules
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/case-studies"
-                  className={`${
-                    theme === "dark"
-                      ? "text-white/80 hover:text-white"
-                      : "text-black/80 hover:text-black"
-                  } transition-colors`}
-                >
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/pricing"
-                  className={`${
-                    theme === "dark"
-                      ? "text-white/80 hover:text-white"
-                      : "text-black/80 hover:text-black"
-                  } transition-colors`}
-                >
-                  Pricing
-                </Link>
-              </li>
+              {footerLinks.product.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className={`${
+                      theme === "dark"
+                        ? "text-white/80 hover:text-white"
+                        : "text-black/80 hover:text-black"
+                    } transition-colors`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -160,54 +174,120 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
               Company
             </h4>
             <ul className="space-y-4">
-              <li>
-                <Link
-                  to="/about"
-                  className={`${
-                    theme === "dark"
-                      ? "text-white/80 hover:text-white"
-                      : "text-black/80 hover:text-black"
-                  } transition-colors`}
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog"
-                  className={`${
-                    theme === "dark"
-                      ? "text-white/80 hover:text-white"
-                      : "text-black/80 hover:text-black"
-                  } transition-colors`}
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/careers"
-                  className={`${
-                    theme === "dark"
-                      ? "text-white/80 hover:text-white"
-                      : "text-black/80 hover:text-black"
-                  } transition-colors`}
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className={`${
-                    theme === "dark"
-                      ? "text-white/80 hover:text-white"
-                      : "text-black/80 hover:text-black"
-                  } transition-colors`}
-                >
-                  Contact
-                </Link>
-              </li>
+              {footerLinks.company.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className={`${
+                      theme === "dark"
+                        ? "text-white/80 hover:text-white"
+                        : "text-black/80 hover:text-black"
+                    } transition-colors`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              className={`text-sm font-medium tracking-widest ${
+                theme === "dark" ? "text-white/60" : "text-black/60"
+              } uppercase mb-6`}
+            >
+              Developers
+            </h4>
+            <ul className="space-y-4">
+              {footerLinks.developers.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className={`${
+                      theme === "dark"
+                        ? "text-white/80 hover:text-white"
+                        : "text-black/80 hover:text-black"
+                    } transition-colors`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4
+              className={`text-sm font-medium tracking-widest ${
+                theme === "dark" ? "text-white/60" : "text-black/60"
+              } uppercase mb-6 mt-8`}
+            >
+              Partners
+            </h4>
+            <ul className="space-y-4">
+              {footerLinks.partners.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className={`${
+                      theme === "dark"
+                        ? "text-white/80 hover:text-white"
+                        : "text-black/80 hover:text-black"
+                    } transition-colors`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              className={`text-sm font-medium tracking-widest ${
+                theme === "dark" ? "text-white/60" : "text-black/60"
+              } uppercase mb-6`}
+            >
+              Resources
+            </h4>
+            <ul className="space-y-4">
+              {footerLinks.resources.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className={`${
+                      theme === "dark"
+                        ? "text-white/80 hover:text-white"
+                        : "text-black/80 hover:text-black"
+                    } transition-colors`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4
+              className={`text-sm font-medium tracking-widest ${
+                theme === "dark" ? "text-white/60" : "text-black/60"
+              } uppercase mb-6 mt-8`}
+            >
+              Community
+            </h4>
+            <ul className="space-y-4">
+              {footerLinks.community.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className={`${
+                      theme === "dark"
+                        ? "text-white/80 hover:text-white"
+                        : "text-black/80 hover:text-black"
+                    } transition-colors`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -266,36 +346,19 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
               &copy; {currentYear} Tredumo. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <Link
-                to="/privacy"
-                className={`${
-                  theme === "dark"
-                    ? "text-white/60 hover:text-white"
-                    : "text-black/60 hover:text-black"
-                } transition-colors`}
-              >
-                Privacy
-              </Link>
-              <Link
-                to="/terms"
-                className={`${
-                  theme === "dark"
-                    ? "text-white/60 hover:text-white"
-                    : "text-black/60 hover:text-black"
-                } transition-colors`}
-              >
-                Terms
-              </Link>
-              <a
-                href="#cookies"
-                className={`${
-                  theme === "dark"
-                    ? "text-white/60 hover:text-white"
-                    : "text-black/60 hover:text-black"
-                } transition-colors`}
-              >
-                Cookies
-              </a>
+              {footerLinks.legal.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`${
+                    theme === "dark"
+                      ? "text-white/60 hover:text-white"
+                      : "text-black/60 hover:text-black"
+                  } transition-colors`}
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

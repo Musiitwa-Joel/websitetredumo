@@ -14,6 +14,37 @@ import ContactPage from "./pages/ContactPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 import NotFoundPage from "./pages/NotFoundPage";
+
+// Company Pages
+import CorporateResponsibilityPage from "./pages/company/CorporateResponsibilityPage";
+import ESGPage from "./pages/company/ESGPage";
+import MediaKitPage from "./pages/company/MediaKitPage";
+// import WhitepapersPage from "./pages/company/WhitepapersPage";
+// import DiversityPage from "./pages/company/DiversityPage";
+// import EventsPage from "./pages/company/EventsPage";
+
+// Developer Pages
+// import DevelopersPage from "./pages/developers/DevelopersPage";
+// import BugBountyPage from "./pages/developers/BugBountyPage";
+// import HackathonsPage from "./pages/developers/HackathonsPage";
+// import FeatureRequestsPage from "./pages/developers/FeatureRequestsPage";
+// import ProductUpdatesPage from "./pages/developers/ProductUpdatesPage";
+
+// Partner Pages
+// import PartnerPortalPage from "./pages/partners/PartnerPortalPage";
+// import StartupProgramPage from "./pages/partners/StartupProgramPage";
+// import AffiliateProgramPage from "./pages/partners/AffiliateProgramPage";
+
+// Resources Pages
+// import TrustCenterPage from "./pages/resources/TrustCenterPage";
+// import ComplianceHubPage from "./pages/resources/ComplianceHubPage";
+// import MobileAppPage from "./pages/resources/MobileAppPage";
+
+// Community Pages
+// import MerchStorePage from "./pages/community/MerchStorePage";
+// import VIPAccessPage from "./pages/community/VIPAccessPage";
+// import LeaderboardPage from "./pages/community/LeaderboardPage";
+
 import "../public/fonts/fonts.css";
 
 function App() {
@@ -57,6 +88,73 @@ function App() {
           <Route path="/contact" element={<ContactPage theme={theme} />} />
           <Route path="/privacy" element={<PrivacyPage theme={theme} />} />
           <Route path="/terms" element={<TermsPage theme={theme} />} />
+
+          {/* Company Routes */}
+          <Route
+            path="/corporate-responsibility"
+            element={<CorporateResponsibilityPage theme={theme} />}
+          />
+          <Route path="/esg" element={<ESGPage theme={theme} />} />
+          <Route path="/media-kit" element={<MediaKitPage theme={theme} />} />
+          {/* <Route
+            path="/whitepapers"
+            element={<WhitepapersPage theme={theme} />}
+          /> */}
+          {/* <Route path="/diversity" element={<DiversityPage theme={theme} />} />
+          <Route path="/events" element={<EventsPage theme={theme} />} /> */}
+
+          {/* Developer Routes */}
+          {/* <Route
+            path="/developers"
+            element={<DevelopersPage theme={theme} />}
+          /> */}
+          {/* <Route
+            path="/security/bug-bounty"
+            element={<BugBountyPage theme={theme} />}
+          /> */}
+          {/* <Route
+            path="/hackathons"
+            element={<HackathonsPage theme={theme} />}
+          /> */}
+          {/* <Route
+            path="/features/requests"
+            element={<FeatureRequestsPage theme={theme} />}
+          /> */}
+          {/* <Route
+            path="/updates"
+            element={<ProductUpdatesPage theme={theme} />}
+          /> */}
+
+          {/* Partner Routes */}
+          {/* <Route
+            path="/partners/portal"
+            element={<PartnerPortalPage theme={theme} />}
+          /> */}
+          {/* <Route
+            path="/startup-program"
+            element={<StartupProgramPage theme={theme} />}
+          />
+          <Route
+            path="/affiliate"
+            element={<AffiliateProgramPage theme={theme} />}
+          /> */}
+
+          {/* Resources Routes */}
+          {/* <Route path="/trust" element={<TrustCenterPage theme={theme} />} />
+          <Route
+            path="/compliance"
+            element={<ComplianceHubPage theme={theme} />}
+          />
+          <Route path="/mobile" element={<MobileAppPage theme={theme} />} /> */}
+
+          {/* Community Routes */}
+          {/* <Route path="/store" element={<MerchStorePage theme={theme} />} />
+          <Route path="/vip" element={<VIPAccessPage theme={theme} />} />
+          <Route
+            path="/leaderboard"
+            element={<LeaderboardPage theme={theme} />}
+          /> */}
+
           <Route path="*" element={<NotFoundPage theme={theme} />} />
         </Routes>
         <Footer theme={theme} />
