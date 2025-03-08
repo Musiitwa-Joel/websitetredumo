@@ -19,24 +19,24 @@ import NotFoundPage from "./pages/NotFoundPage";
 import CorporateResponsibilityPage from "./pages/company/CorporateResponsibilityPage";
 import ESGPage from "./pages/company/ESGPage";
 import MediaKitPage from "./pages/company/MediaKitPage";
-// import WhitepapersPage from "./pages/company/WhitepapersPage";
-// import DiversityPage from "./pages/company/DiversityPage";
+import WhitepapersPage from "./pages/company/WhitepapersPage";
+import DiversityPage from "./pages/company/DiversityPage";
 // import EventsPage from "./pages/company/EventsPage";
 
 // Developer Pages
 // import DevelopersPage from "./pages/developers/DevelopersPage";
-// import BugBountyPage from "./pages/developers/BugBountyPage";
+import BugBountyPage from "./pages/developers/BugBountyPage";
 // import HackathonsPage from "./pages/developers/HackathonsPage";
 // import FeatureRequestsPage from "./pages/developers/FeatureRequestsPage";
 // import ProductUpdatesPage from "./pages/developers/ProductUpdatesPage";
 
 // Partner Pages
-// import PartnerPortalPage from "./pages/partners/PartnerPortalPage";
+import PartnerPortalPage from "./pages/partners/PartnerPortalPage";
 // import StartupProgramPage from "./pages/partners/StartupProgramPage";
 // import AffiliateProgramPage from "./pages/partners/AffiliateProgramPage";
 
 // Resources Pages
-// import TrustCenterPage from "./pages/resources/TrustCenterPage";
+import TrustCenterPage from "./pages/resources/Resources";
 // import ComplianceHubPage from "./pages/resources/ComplianceHubPage";
 // import MobileAppPage from "./pages/resources/MobileAppPage";
 
@@ -96,22 +96,22 @@ function App() {
           />
           <Route path="/esg" element={<ESGPage theme={theme} />} />
           <Route path="/media-kit" element={<MediaKitPage theme={theme} />} />
-          {/* <Route
+          <Route
             path="/whitepapers"
             element={<WhitepapersPage theme={theme} />}
-          /> */}
-          {/* <Route path="/diversity" element={<DiversityPage theme={theme} />} />
-          <Route path="/events" element={<EventsPage theme={theme} />} /> */}
+          />
+          <Route path="/diversity" element={<DiversityPage theme={theme} />} />
+          {/* <Route path="/events" element={<EventsPage theme={theme} />} /> */}
 
           {/* Developer Routes */}
           {/* <Route
             path="/developers"
             element={<DevelopersPage theme={theme} />}
           /> */}
-          {/* <Route
+          <Route
             path="/security/bug-bounty"
             element={<BugBountyPage theme={theme} />}
-          /> */}
+          />
           {/* <Route
             path="/hackathons"
             element={<HackathonsPage theme={theme} />}
@@ -126,10 +126,10 @@ function App() {
           /> */}
 
           {/* Partner Routes */}
-          {/* <Route
+          <Route
             path="/partners/portal"
             element={<PartnerPortalPage theme={theme} />}
-          /> */}
+          />
           {/* <Route
             path="/startup-program"
             element={<StartupProgramPage theme={theme} />}
@@ -140,12 +140,12 @@ function App() {
           /> */}
 
           {/* Resources Routes */}
-          {/* <Route path="/trust" element={<TrustCenterPage theme={theme} />} />
-          <Route
+          <Route path="/trust" element={<TrustCenterPage theme={theme} />} />
+          {/* <Route
             path="/compliance"
             element={<ComplianceHubPage theme={theme} />}
-          />
-          <Route path="/mobile" element={<MobileAppPage theme={theme} />} /> */}
+          /> */}
+          {/* <Route path="/mobile" element={<MobileAppPage theme={theme} />} /> */}
 
           {/* Community Routes */}
           {/* <Route path="/store" element={<MerchStorePage theme={theme} />} />
