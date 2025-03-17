@@ -21,29 +21,29 @@ import ESGPage from "./pages/company/ESGPage";
 import MediaKitPage from "./pages/company/MediaKitPage";
 import WhitepapersPage from "./pages/company/WhitepapersPage";
 import DiversityPage from "./pages/company/DiversityPage";
-// import EventsPage from "./pages/company/EventsPage";
+import EventsPage from "./pages/company/EventsPage";
 
 // Developer Pages
-// import DevelopersPage from "./pages/developers/DevelopersPage";
+import DevelopersPage from "./pages/developers/DevelopersPage";
 import BugBountyPage from "./pages/developers/BugBountyPage";
-// import HackathonsPage from "./pages/developers/HackathonsPage";
+import HackathonsPage from "./pages/developers/HackathonsPage";
 // import FeatureRequestsPage from "./pages/developers/FeatureRequestsPage";
 // import ProductUpdatesPage from "./pages/developers/ProductUpdatesPage";
 
 // Partner Pages
 import PartnerPortalPage from "./pages/partners/PartnerPortalPage";
-// import StartupProgramPage from "./pages/partners/StartupProgramPage";
+import StartupProgramPage from "./pages/partners/StartupProgramPage";
 // import AffiliateProgramPage from "./pages/partners/AffiliateProgramPage";
 
 // Resources Pages
 import TrustCenterPage from "./pages/resources/Resources";
-// import ComplianceHubPage from "./pages/resources/ComplianceHubPage";
+import ComplianceHubPage from "./pages/resources/ComplianceHubPage";
 // import MobileAppPage from "./pages/resources/MobileAppPage";
 
 // Community Pages
-// import MerchStorePage from "./pages/community/MerchStorePage";
-// import VIPAccessPage from "./pages/community/VIPAccessPage";
-// import LeaderboardPage from "./pages/community/LeaderboardPage";
+import MerchStorePage from "./pages/community/MerchStorePage/MerchStore";
+import VIPAccessPage from "./pages/community/MerchStorePage/VIPAccessPage";
+import LeaderboardPage from "./pages/community/LeaderboardPage";
 
 import "../public/fonts/fonts.css";
 
@@ -101,21 +101,21 @@ function App() {
             element={<WhitepapersPage theme={theme} />}
           />
           <Route path="/diversity" element={<DiversityPage theme={theme} />} />
-          {/* <Route path="/events" element={<EventsPage theme={theme} />} /> */}
+          <Route path="/events" element={<EventsPage theme={theme} />} />
 
           {/* Developer Routes */}
-          {/* <Route
+          <Route
             path="/developers"
             element={<DevelopersPage theme={theme} />}
-          /> */}
+          />
           <Route
             path="/security/bug-bounty"
             element={<BugBountyPage theme={theme} />}
           />
-          {/* <Route
+          <Route
             path="/hackathons"
             element={<HackathonsPage theme={theme} />}
-          /> */}
+          />
           {/* <Route
             path="/features/requests"
             element={<FeatureRequestsPage theme={theme} />}
@@ -130,30 +130,30 @@ function App() {
             path="/partners/portal"
             element={<PartnerPortalPage theme={theme} />}
           />
-          {/* <Route
+          <Route
             path="/startup-program"
             element={<StartupProgramPage theme={theme} />}
           />
-          <Route
+          {/* <Route
             path="/affiliate"
             element={<AffiliateProgramPage theme={theme} />}
           /> */}
 
           {/* Resources Routes */}
           <Route path="/trust" element={<TrustCenterPage theme={theme} />} />
-          {/* <Route
+          <Route
             path="/compliance"
             element={<ComplianceHubPage theme={theme} />}
-          /> */}
+          />
           {/* <Route path="/mobile" element={<MobileAppPage theme={theme} />} /> */}
 
           {/* Community Routes */}
-          {/* <Route path="/store" element={<MerchStorePage theme={theme} />} />
+          <Route path="/store" element={<MerchStorePage theme={theme} />} />
           <Route path="/vip" element={<VIPAccessPage theme={theme} />} />
           <Route
             path="/leaderboard"
             element={<LeaderboardPage theme={theme} />}
-          /> */}
+          />
 
           <Route path="*" element={<NotFoundPage theme={theme} />} />
         </Routes>
